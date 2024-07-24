@@ -20,6 +20,10 @@ message AccountSignature {
 // a separate message for BroadcastedTransaction.
 message Transaction
 {
+    message Dummy {
+        bytes bytes = 1;
+    }
+
     message DeclareV0 {
         Address sender = 1;
         Felt252 max_fee = 2;
@@ -127,6 +131,8 @@ message Transaction
     }
 
     oneof txn {
+        Dummy dummy = 42;
+
         DeclareV0 declare_v0 = 1;
         DeclareV1 declare_v1 = 2;
         DeclareV2 declare_v2 = 3;
