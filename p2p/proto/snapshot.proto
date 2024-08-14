@@ -2,6 +2,7 @@ syntax = "proto3";
 
 import "p2p/proto/common.proto";
 import "p2p/proto/state.proto";
+import "p2p/proto/class.proto";
 
 message PatriciaNode {
     message Edge {
