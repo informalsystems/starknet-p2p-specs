@@ -51,6 +51,11 @@ message ProposalFin {
 // lower bound should be "greater than the previous timestamp". Upper bounds don't suffer from this
 // problem.
 message ProposalPart {
+    uint64 height = 5;
+    uint32 round  = 6;
+    uint64 sequence = 7;
+    Address proposer = 8;
+
     oneof messages {
         ProposalInit init         = 1;
         ProposalFin  fin          = 2;
