@@ -63,7 +63,8 @@ message ProposalPart {
     }
 }
 
-/// ADDED
+// ADDED
+// TODO: Remove this message
 message Proposal {
     uint64 fork_id = 1;
     uint64 block_number = 2;
